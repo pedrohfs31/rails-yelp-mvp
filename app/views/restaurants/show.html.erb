@@ -25,7 +25,27 @@
 <!-- <p>ADICIONAR REVIEWS ABAIXO!!!!</p> -->
 
 
+<% if @restaurant.reviews.count.zero? %>
+  <p>
+    Be the first to leave a review
+
+  </p>
+<% else %>
+
+  <ul>
+    <% @restaurant.reviews.each do |review| %>
+      <li>
+        Rating: <%= review.rating %>
+        Content: <%= review.content %>
+        </li>
+    <% end %>
+  </ul>
+
+<% end %>
+
 <!-- <p>ADICIONAR LINKS ABAIXO!!!!</p> -->
 
 
 <%= link_to 'Back', restaurants_path %>
+
+<%= link_to 'Add a review', new_restaurant_review_path(@restaurant) %>
