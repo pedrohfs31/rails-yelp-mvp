@@ -12,14 +12,20 @@
 </p>
 
 <p>
-  <strong>Stars:</strong>
+  <strong>Category:</strong>
   <%= @restaurant.category %>
 </p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @restaurant.phone_number %>
+</p>
+
 
 <!-- <p>ADICIONAR REVIEWS ABAIXO!!!!</p> -->
 
 
 <!-- <p>ADICIONAR LINKS ABAIXO!!!!</p> -->
 
-<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
+
 <%= link_to 'Back', restaurants_path %>
